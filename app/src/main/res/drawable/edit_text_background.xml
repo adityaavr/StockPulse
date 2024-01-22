@@ -1,0 +1,9 @@
+<!-- res/drawable/edit_text_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="30dp"/> <!-- Rounded corners -->
+
+    <gradient
+        android:startColor="#665F5E5B"
+        android:endColor="#66CCCAC7"
+        android:angle="270"/>
+</shape>

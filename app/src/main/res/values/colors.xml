@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sunset_orange">#FFA26D</color>
+    <color name="sunset_yellow">#FFD371</color>
+    <color name="twilight_blue">#517FA4</color>
+    <color name="night_black">#000000</color>
+    <color name="cloud_white">#FFFFFF</color>
+    <color name="sunset_white">#FFF6E7</color>
+    <color name="ocean_green">#3B9A9C</color>
+    <color name="dusk_purple">#8A5A83</color>
+    <color name="early_dawn">#F7E0A3</color>
+    <color name="deep_sea_blue">#013A63</color>
+    <color name="forest_green">#228B22</color>
+    <color name="sunset_green">#AEBC9B</color>
+    <color name="burnt_sienna">#EA7E5D</color>
+    <color name="rose_pink">#FFC0CB</color>
+    <color name="sky_gray">#B1BEC4</color>
+    <color name="goldenrod">#DAA520</color>
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0BA8C"
+    android:padding="16dp"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Hello Peter, 5th January 2024"
+        app:titleTextColor="@color/twilight_blue">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:text="Hello Peter, 15 January 2024"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/iconAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="1dp"
+                android:contentDescription="@string/about"
+                android:src="@drawable/ic_about" />
+
+            <ImageView
+                android:id="@+id/iconScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/iconAbout"
+                android:contentDescription="@string/scan"
+                android:src="@drawable/ic_scan" />
+
+            <ImageView
+                android:id="@+id/iconNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_toStartOf="@id/iconScan"
+                android:contentDescription="@string/alerts"
+                android:src="@drawable/ic_alerts" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Total Items CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_total_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/sunset_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_home">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/sunset_white"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Items"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/sunset_orange"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/totalItemsTextView"
+                android:layout_height="wrap_content"
+                android:text="300"
+                android:textSize="18sp"
+                android:textColor="@color/sunset_yellow"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Low Stock CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_low_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/sunset_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_total_items">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/sunset_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low Stock"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/burnt_sienna"/>
+
+            <TextView
+                android:id="@+id/lowStockItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milo"
+                android:textSize="18sp" />
+            <!-- Add more TextViews for other low stock items -->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Stocks CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_stocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/sunset_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_low_stock">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stocks"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/forest_green"/>
+
+            <!-- Container for dynamically adding ProgressBars -->
+            <LinearLayout
+                android:id="@+id/stockProgressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- ProgressBars will be added here programmatically -->
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Sales by Month CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_alerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/sunset_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_stocks">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alerts"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/dusk_purple"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/card_dashboard_alerts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

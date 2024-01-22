@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.P2204398_StockPulse" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sunset_orange</item>
+        <item name="colorPrimaryVariant">@color/sunset_yellow</item>
+        <item name="colorOnPrimary">@color/cloud_white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/twilight_blue</item>
+        <item name="colorSecondaryVariant">@color/twilight_blue</item>
+        <item name="colorOnSecondary">@color/night_black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sunset_yellow</item>
+        <!-- Customize your theme here. -->
+        <!-- You might want to change the colors for other UI elements as well -->
+    </style>
+</resources>

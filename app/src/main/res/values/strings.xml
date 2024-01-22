@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">P2204398_StockPulse</string>
+    <string name="label_text">Welcome to StockPulse</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="inventory">Inventory</string>
+    <string name="scan">Scan</string>
+    <string name="alerts">Alerts</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+</resources>

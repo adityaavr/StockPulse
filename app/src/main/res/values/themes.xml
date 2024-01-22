@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.P2204398_StockPulse" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sunset_orange</item>
+        <item name="colorPrimaryVariant">@color/sunset_yellow</item>
+        <item name="colorOnPrimary">@color/cloud_white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/twilight_blue</item>
+        <item name="colorSecondaryVariant">@color/twilight_blue</item>
+        <item name="colorOnSecondary">@color/night_black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sunset_yellow</item>
+        <!-- Customize your theme here. -->
+        <!-- You might want to change the colors for other UI elements as well -->
+    </style>
+
+    <style name="MyTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <!-- other customizations -->
+    </style>
+
+
+
+    <style name="label_text">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#CFEEF1</item>
+    </style>
+
+    <style name="CircularImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="signing_up_">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#1D1B20</item>
+    </style>
+
+
+
+</resources>

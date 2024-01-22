@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+  <TextView
+      android:id="@+id/tvSignUpToStockPulse"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Signing up to StockPulse"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="48dp"
+      android:gravity="center" />
+
+  <EditText
+      android:id="@+id/etOrganisationName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/edit_text_background"
+      android:hint="Your organisation name"
+      android:inputType="text"
+      android:minHeight="48dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:textColor="#000"
+      android:textColorHint="#006064"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvSignUpToStockPulse"
+      app:layout_constraintWidth_percent="0.75" />
+
+  <EditText
+      android:id="@+id/etBusinessEmail"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/sign_up_button"
+      android:hint="Enter your business email"
+      android:inputType="textEmailAddress"
+      android:minHeight="48dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:textColor="#000"
+      android:textColorHint="#006064"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etOrganisationName"
+      app:layout_constraintWidth_percent="0.75" />
+
+  <EditText
+      android:id="@+id/etYourName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/edit_text_background"
+      android:hint="Enter your name"
+      android:inputType="text"
+      android:minHeight="48dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:textColor="#000"
+      android:textColorHint="#006064"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etBusinessEmail"
+      app:layout_constraintWidth_percent="0.75" />
+
+  <EditText
+      android:id="@+id/etPassword"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/edit_text_background"
+      android:hint="Enter your password"
+      android:inputType="textPassword"
+      android:minHeight="48dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:textColor="#000"
+      android:textColorHint="#006064"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etYourName"
+      app:layout_constraintWidth_percent="0.75" />
+
+  <EditText
+      android:id="@+id/etConfirmPassword"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:background="@drawable/edit_text_background"
+      android:hint="Confirm your password"
+      android:inputType="textPassword"
+      android:minHeight="48dp"
+      android:paddingLeft="16dp"
+      android:paddingTop="10dp"
+      android:paddingRight="16dp"
+      android:paddingBottom="10dp"
+      android:textColor="#000"
+      android:textColorHint="#006064"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etPassword"
+      app:layout_constraintWidth_percent="0.75" />
+
+  <Button
+      android:id="@+id/buttonSignUp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:background="@drawable/sign_up_button"
+      android:text="Sign Up"
+      android:textColor="#FFFFFF"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etConfirmPassword"
+      app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

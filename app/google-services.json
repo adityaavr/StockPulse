@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339136957715",
+    "project_id": "stockpulse-8cd52",
+    "storage_bucket": "stockpulse-8cd52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339136957715:android:f56415b957370e2577dee6",
+        "android_client_info": {
+          "package_name": "sp.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-xDhCrj_lN-GqQI7wGllWlTbTeYyVJVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
