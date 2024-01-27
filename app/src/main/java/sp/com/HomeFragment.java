@@ -1,10 +1,12 @@
 package sp.com;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -15,8 +17,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -34,6 +38,7 @@ public class HomeFragment extends Fragment {
     private LinearLayout stockProgressContainer;
     private FirebaseFirestore db;
     private ListenerRegistration firestoreListener;
+    private BottomNavigationView navView;
 
     @Nullable
     @Override
@@ -44,16 +49,47 @@ public class HomeFragment extends Fragment {
         totalItemsTextView = view.findViewById(R.id.totalItemsTextView);
         stockProgressContainer = view.findViewById(R.id.stockProgressContainer);
         db = FirebaseFirestore.getInstance();
+        navView = getActivity().findViewById(R.id.bottom_navigation);
 
         fetchUserNameAndDisplay();
         updateTotalItemsAndStocks();
 
-        RecyclerView recyclerView = view.findViewById(R.id.card_dashboard_alerts);
         // Setup RecyclerView, Adapter, and Layout Manager
 
-        ImageView aboutIcon = view.findViewById(R.id.iconAbout);
-        aboutIcon.setOnClickListener(v -> {
-            // Handle the about icon click event
+        ImageButton aboutIcon = view.findViewById(R.id.iconAbout);
+        aboutIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the AboutActivity when ic_about is clicked
+                Intent intent = new Intent(getActivity(), AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton scanIcon = view.findViewById(R.id.iconScan);
+        scanIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                QRCodeFragment qrCodeFragment = new QRCodeFragment();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, qrCodeFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                navView.setSelectedItemId(R.id.navigation_scan);
+            }
+        });
+
+        ImageButton alertsButton = view.findViewById(R.id.iconNotification);
+        alertsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertsFragment alertsFragment = new AlertsFragment();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, alertsFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                navView.setSelectedItemId(R.id.navigation_alerts);
+            }
         });
 
         // Additional UI initialization and event handling

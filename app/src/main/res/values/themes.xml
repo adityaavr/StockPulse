@@ -13,6 +13,7 @@
         <item name="android:statusBarColor">@color/sunset_yellow</item>
         <!-- Customize your theme here. -->
         <!-- You might want to change the colors for other UI elements as well -->
+        <item name="android:fontFamily">@font/marlin_font</item>
     </style>
 
     <style name="MyTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">

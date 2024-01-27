@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private InventoryFragment inventoryFragment;
     private BottomNavigationView navView;
     private QRCodeFragment qrCodeFragment;
+    private AlertsFragment alertsFragment;
+    private ProfileFragment profileFragment;
 
 
     @Override
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
         inventoryFragment = new InventoryFragment();
         qrCodeFragment = new QRCodeFragment();
+        alertsFragment = new AlertsFragment();
+        profileFragment = new ProfileFragment();
 
         // Load the default fragment when the app starts
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
@@ -47,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = inventoryFragment;
             } else if (itemId == R.id.navigation_scan) {
                 selectedFragment = qrCodeFragment;
+            } else if (itemId == R.id.navigation_alerts) {
+                selectedFragment = alertsFragment;
+            } else if (itemId == R.id.navigation_profile) {
+                selectedFragment = profileFragment;
             }
 
             if (selectedFragment != null) {
@@ -56,4 +64,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     };
+
 }

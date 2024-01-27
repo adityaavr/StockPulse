@@ -27,37 +27,47 @@
                 android:id="@+id/heading"
                 android:layout_width="220dp"
                 android:layout_height="match_parent"
-                android:text="Hello Peter, 15 January 2024"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_centerVertical="true" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/iconAbout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="1dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
                 android:contentDescription="@string/about"
                 android:src="@drawable/ic_about" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/iconScan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_toStartOf="@id/iconAbout"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
                 android:contentDescription="@string/scan"
                 android:src="@drawable/ic_scan" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/iconNotification"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_toStartOf="@id/iconScan"
-                android:contentDescription="@string/alerts"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/ic_alerts" />
+
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
+
 
     <!-- Total Items CardView -->
     <androidx.cardview.widget.CardView
@@ -76,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/sunset_white"
+            android:background="@color/early_dawn"
             android:padding="16dp">
 
             <TextView
@@ -91,9 +101,7 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/totalItemsTextView"
                 android:layout_height="wrap_content"
-                android:text="300"
-                android:textSize="18sp"
-                android:textColor="@color/sunset_yellow"/>
+                android:textSize="18sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -105,7 +113,7 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/sunset_white"
+        app:cardBackgroundColor="@color/early_dawn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_total_items">
@@ -115,7 +123,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:background="@color/sunset_white">
+            android:background="@color/early_dawn">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,7 +137,6 @@
                 android:id="@+id/lowStockItemName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Milo"
                 android:textSize="18sp" />
             <!-- Add more TextViews for other low stock items -->
         </LinearLayout>
@@ -143,7 +150,7 @@
         android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/sunset_white"
+        app:cardBackgroundColor="@color/early_dawn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_low_stock">
@@ -170,42 +177,6 @@
                 android:orientation="vertical">
                 <!-- ProgressBars will be added here programmatically -->
             </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Sales by Month CardView -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_alerts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="@color/sunset_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_stocks">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alerts"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/dusk_purple"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/card_dashboard_alerts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

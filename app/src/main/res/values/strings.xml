@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">P2204398_StockPulse</string>
+    <string name="app_name">StockPulse</string>
     <string name="label_text">Welcome to StockPulse</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -11,4 +11,6 @@
     <string name="about">About</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
+    <string name="app_description"></string>
+
 </resources>
